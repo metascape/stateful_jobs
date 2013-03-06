@@ -34,7 +34,7 @@ Add the provided jQuery Plugin to your application.js:
 //= require stateful_jobs
 ```
 
-Or place it manually wherever your application can laod it.
+Or place it manually wherever your application can load it.
 
 
 ## Usage
