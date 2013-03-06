@@ -127,6 +127,8 @@ Adds the followng to your html:
 
 ```html
 <div class="spinner" id="import_1" data-id="1" data-current-job="current-job" data-current-state="current-state">
+  spinner
+</div>
 <script type="test/javascript">
   $('#import_1').statefulJobs({'interval': 3000})
 </script>
