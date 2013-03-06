@@ -74,7 +74,7 @@ end
 ```
 
 Your Model now has been equiped with following methods: `extract!`, `execute!` which automatically enqueue your job on resque.
-While a job is processed its state is set to 'running'. Finished job's states are set depending on their return value. A Sucessfully performed job's (return true) state becomes 'done'. If a Job returns false, its state is set to 'failed'. Errors raising an Exception result into an 'error' state.
+While a job is processed its state is set to `running`. Finished job's states are set depending on their return value. A Sucessfully performed job's (returns true) state becomes `done`. If a Job returns false, its state is set to `failed`. Errors raising an Exception result into an `error` state.
 
 
 Prepare your Controller:
