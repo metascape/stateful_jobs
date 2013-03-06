@@ -2,10 +2,12 @@
 
 StatefulJobs is a Resque based library which allows you to integrate responsive background jobs in a very easy way.
 StatefulJobs wraps an ActiveRecord Model around a set of jobs and adds a polling mechanism to your frontend to get your users noticed about the state of their tasks.
+
 Very useful for:
 * background jobs which provide its state to the frontend
 * background jobs which need user interaction between several steps
 * a set of jobs which share process information
+
 All these jobs can either be implemented as a separate Class or inline with just a handy Proc.
 
 
