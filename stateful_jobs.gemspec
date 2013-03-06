@@ -5,9 +5,8 @@ require File.expand_path('../lib/stateful_jobs/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["metascape. / Kjell Schlitt"]
   gem.email         = ["kjell.schlitt@metascape.de"]
-  gem.description   = %q{fancy gem description}
-  gem.summary       = %q{fancy gem summary}
-  gem.homepage      = "http://metascape"
+  gem.summary       = "StatefulJobs allows you to integrate your background jobs in a very stateful and responsive way into your rails app"
+  gem.homepage      = "http://metascape.de"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -22,4 +21,16 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rspec-rails'
   gem.add_development_dependency 'sqlite3-ruby'
   gem.add_development_dependency 'resque'
+
+  gem.description = <<description
+    StatefulJobs is a Resque based library which allows you to integrate responsive background jobs in a very easy way. StatefulJobs wraps an ActiveRecord Model around a set of jobs and adds a polling mechanism to your frontend to get your users noticed about the state of their tasks.
+
+    Very useful for:
+
+    * background jobs which provide its state to the frontend
+    * background jobs which need user interaction between several steps
+    * a set of jobs which share process information
+
+    All these jobs can either be implemented as a separate Class or inline with just a handy Proc.
+description
 end
