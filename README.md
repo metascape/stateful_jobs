@@ -41,7 +41,7 @@ Or place it manually wherever your application can load it.
 
 ## Usage
 
-Create your Model:
+### Model
 
 ```
 $ rails g model import current_job:string current_state:string some:string other:string attributes:integer
@@ -79,7 +79,7 @@ Your Model now has been equiped with following methods: `extract!`, `execute!` w
 While a job is processed its state is set to `running`. Finished job's states are set depending on their return value. A sucessfully performed job's (returns true) state becomes `done`. If a Job returns false, its state is set to `failed`. Errors raising an Exception result into an `error` state.
 
 
-Prepare your Controller:
+### Controller
 
 ```ruby
 class ImportsController < ActiveRecord::Base
@@ -105,19 +105,17 @@ end
 `state_changed` now gets called with current_job and current_state as parameters on every state change.
 
 
-Add some Routes:
+### Routes
 
 ```ruby
 RailsApp::Application.routes.draw do
-
   stateful_jobs :imports
-
 end
 ```
 
 For a complete set of restful routes just use `stateful_jobs_resources :imports`.
 
-View:
+### View
 
 ```erb
 <%= stateful_job :imports, @import, :div, class: 'spinner', interval: 3000 do %>
