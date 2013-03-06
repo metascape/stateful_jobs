@@ -73,7 +73,7 @@ class ImportExecutionJob < StatefulJobs::Job::Base
 end
 ```
 
-Your Model now has been equiped with following methods: ´extract!´, ´execute!´ which automatically enqueue your job on resque.
+Your Model now has been equiped with following methods: `extract!`, `execute!` which automatically enqueue your job on resque.
 While a job is processed its state is set to 'running'. Finished job's states are set depending on their return value. A Sucessfully performed job's (return true) state becomes 'done'. If a Job returns false, its state is set to 'failed'. Errors raising an Exception result into an 'error' state.
 
 
@@ -87,8 +87,8 @@ class ImportsController < ActiveRecord::Base
 end
 ```
 
-This adds a ´state´ member action to your controller returning the current job/state of your Model as JSON.
-Additionally each state gets his own action which is called for every state change of your job. It gets the current state passed as a ´current_state´ parameter.
+This adds a `state` member action to your controller returning the current job/state of your Model as JSON.
+Additionally each state gets his own action which is called for every state change of your job. It gets the current state passed as a `current_state` parameter.
 
 Your can sum up all these state actions into one centralized callback action if you want:
 
@@ -113,7 +113,7 @@ RailsApp::Application.routes.draw do
 end
 ```
 
-For a complete set of restful routes just use ´stateful_jobs_resources :imports´.
+For a complete set of restful routes just use `stateful_jobs_resources :imports`.
 
 View:
 
