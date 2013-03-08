@@ -15,12 +15,11 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = StatefulJobs::VERSION
 
-  gem.add_dependency 'rails'
-  gem.add_dependency 'resque'
+  gem.add_dependency 'rails', '~> 3.2.0'
+  gem.add_dependency 'resque', '>= 1.0.0'
 
-  gem.add_development_dependency 'rspec-rails'
+  gem.add_development_dependency 'rspec-rails', '~> 2.0'
   gem.add_development_dependency 'sqlite3-ruby'
-  gem.add_development_dependency 'resque'
 
   gem.description = <<description
     StatefulJobs is a Resque based library which allows you to integrate responsive background jobs in a very easy way. StatefulJobs wraps an ActiveRecord Model around a set of jobs and adds a polling mechanism to your frontend to get your users noticed about the state of their tasks.
