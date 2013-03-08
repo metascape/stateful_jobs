@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["metascape. / Kjell Schlitt"]
   gem.email         = ["kjell.schlitt@metascape.de"]
   gem.summary       = "StatefulJobs allows you to integrate your background jobs in a very stateful and responsive way into your rails app"
-  gem.homepage      = "http://metascape.de"
+  gem.homepage      = "https://github.com/metascape/stateful_jobs"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
