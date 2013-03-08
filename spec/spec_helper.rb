@@ -10,6 +10,12 @@ require 'rspec/autorun'
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
+load_schema = lambda {
+  load "#{Rails.root.to_s}/db/schema.rb" # use db agnostic schema by default
+  # ActiveRecord::Migrator.up('db/migrate') # use migrations
+}
+silence_stream(STDOUT, &load_schema)
+
 RSpec.configure do |config|
   # == Mock Framework
   #
