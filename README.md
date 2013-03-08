@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/metascape/stateful_jobs.png?branch=master)](https://travis-ci.org/metascape/stateful_jobs)
+
 # StatefulJobs
 
 StatefulJobs is a Resque based library which allows you to integrate responsive background jobs in a very easy way.
