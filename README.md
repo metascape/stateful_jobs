@@ -140,6 +140,13 @@ The plugin now asks the server for a new state every 3 seconds. On state change 
 While a job is running, the css class `running` is applied to your spinner's div.
 
 
+## TBD
+
+1. Add some documentation
+2. Support for different ORM
+3. Support for different job queueing gems (sidekiq, delayed_job)
+
+
 ## Contributing
 
 1. Fork it
